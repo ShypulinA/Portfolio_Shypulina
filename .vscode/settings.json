@@ -1,0 +1,35 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "TEST",
+            "database": "demo",
+            "username": "root",
+            "password": "Sa)11011997",
+            "connectionTimeout": 5000
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "database": "demo",
+            "username": "root",
+            "name": "shypulina",
+            "group": "New",
+            "connectionTimeout": 50,
+            "password": "Sa)11011997"
+        }
+    ]
+}
