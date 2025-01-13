@@ -1,5 +1,4 @@
 --SELECT bez warunków--
---test
 --1.1. Wyświetl wszystkie kolumny i wszystkie wiersze tabeli Customers.CustomersSeld
 SELECT * FROM Customers
 /*1.2. Wyświetl wszystkie dane zawarte w tabeli Products.*/
