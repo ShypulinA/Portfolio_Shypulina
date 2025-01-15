@@ -9,7 +9,7 @@ My greatest asset is the quality of the results I deliver, regardless of the fie
 * [SQL](https://www.microsoft.com/pl-pl/sql-server/sql-server-downloads) 
 * [GIT](https://git-scm.com/) 
 * [POSTMAN](https://www.postman.com/) 
-* [TestReil](https://www.testrail.com/)
+* [TestRail](https://www.testrail.com/)
 * [VSCode](https://code.visualstudio.com/)
 * [FiddlerEverywhere](https://www.telerik.com/download/fiddler-everywhere)
 * [JENKINS](https://www.jenkins.io/)
