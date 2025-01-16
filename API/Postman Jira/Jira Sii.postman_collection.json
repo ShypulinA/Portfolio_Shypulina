@@ -1,0 +1,449 @@
+{
+	"info": {
+		"_postman_id": "95e62267-5aae-45cd-9889-bbd6338b39b6",
+		"name": "Jira Sii",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36927938"
+	},
+	"item": [
+		{
+			"name": "Jira",
+			"item": [
+				{
+					"name": "Get issue id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var template = `",
+									"<style type=\"text/css\">",
+									"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}",
+									"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}",
+									"    .tftable tr {background-color:#ffffff;}",
+									"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}",
+									"    .tftable tr:hover {background-color:#e0ffff;}",
+									"</style>",
+									"",
+									"<table class=\"tftable\" border=\"1\">",
+									"    <tr>",
+									"        <th>Field Name</th>",
+									"        <th>Value</th>",
+									"    </tr>",
+									"    ",
+									"    {{#each response.fields}}",
+									"        <tr>",
+									"            <td>{{@key}}</td>",
+									"            <td>{{this}}</td>",
+									"        </tr>",
+									"    {{/each}}",
+									"</table>",
+									"`;",
+									"",
+									"function constructVisualizerPayload() {",
+									"    return { response: pm.response.json() }",
+									"}",
+									"",
+									"pm.visualizer.set(template, constructVisualizerPayload());"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "ATATT3xFfGF04eVSc38sNE3TzDSfImIkUwqLUfDu3Grlo7uUFC9QCA9hvUY5GnmdGy2hbXEpUM5WwRGJQbc-9E8FNrOpQaqWRapANuL0QnbLdh51vMkZJiJQbyToOyC8Tv51vhwqQNhcay1z0DF_kd9Mro6BDFpoDUB3Qh1Walg6CnAj4qyjplc=35946E4F",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "annshypulina@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://siitraining1.atlassian.net/rest/api/3/issue/ZT-38",
+							"protocol": "https",
+							"host": [
+								"siitraining1",
+								"atlassian",
+								"net"
+							],
+							"path": [
+								"rest",
+								"api",
+								"3",
+								"issue",
+								"ZT-38"
+							]
+						},
+						"description": "wyszukuje konkretne id issue"
+					},
+					"response": []
+				},
+				{
+					"name": "Wyswietlanie wszystkich issue",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "annshypulina@gmail.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "ATATT3xFfGF04eVSc38sNE3TzDSfImIkUwqLUfDu3Grlo7uUFC9QCA9hvUY5GnmdGy2hbXEpUM5WwRGJQbc-9E8FNrOpQaqWRapANuL0QnbLdh51vMkZJiJQbyToOyC8Tv51vhwqQNhcay1z0DF_kd9Mro6BDFpoDUB3Qh1Walg6CnAj4qyjplc=35946E4F",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://siitraining1.atlassian.net/rest/agile/1.0/board/3/issue",
+							"protocol": "https",
+							"host": [
+								"siitraining1",
+								"atlassian",
+								"net"
+							],
+							"path": [
+								"rest",
+								"agile",
+								"1.0",
+								"board",
+								"3",
+								"issue"
+							]
+						},
+						"description": "get - sprawdzenie kart na tablicy\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Wyśwetlanie wszystkich rodzajów issuetype dla projektu",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "annshypulina@gmail.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "ATATT3xFfGF04eVSc38sNE3TzDSfImIkUwqLUfDu3Grlo7uUFC9QCA9hvUY5GnmdGy2hbXEpUM5WwRGJQbc-9E8FNrOpQaqWRapANuL0QnbLdh51vMkZJiJQbyToOyC8Tv51vhwqQNhcay1z0DF_kd9Mro6BDFpoDUB3Qh1Walg6CnAj4qyjplc=35946E4F",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://siitraining1.atlassian.net/rest/api/3/issuetype/project?projectId=10002",
+							"protocol": "https",
+							"host": [
+								"siitraining1",
+								"atlassian",
+								"net"
+							],
+							"path": [
+								"rest",
+								"api",
+								"3",
+								"issuetype",
+								"project"
+							],
+							"query": [
+								{
+									"key": "projectId",
+									"value": "10002"
+								}
+							]
+						},
+						"description": "wyszukuje konkretne id issue"
+					},
+					"response": []
+				},
+				{
+					"name": "Wyświetlanie wszystko z backlogu",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "annshypulina@gmail.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "ATATT3xFfGF04eVSc38sNE3TzDSfImIkUwqLUfDu3Grlo7uUFC9QCA9hvUY5GnmdGy2hbXEpUM5WwRGJQbc-9E8FNrOpQaqWRapANuL0QnbLdh51vMkZJiJQbyToOyC8Tv51vhwqQNhcay1z0DF_kd9Mro6BDFpoDUB3Qh1Walg6CnAj4qyjplc=35946E4F",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://siitraining1.atlassian.net/rest/api/3/search?jql=project=10002 AND type=\"Nowy typ zadania\"",
+							"protocol": "https",
+							"host": [
+								"siitraining1",
+								"atlassian",
+								"net"
+							],
+							"path": [
+								"rest",
+								"api",
+								"3",
+								"search"
+							],
+							"query": [
+								{
+									"key": "jql",
+									"value": "project=10002 AND type=\"Nowy typ zadania\""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ustawienie / zmiana fix version",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "annshypulina@gmail.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "ATATT3xFfGF04eVSc38sNE3TzDSfImIkUwqLUfDu3Grlo7uUFC9QCA9hvUY5GnmdGy2hbXEpUM5WwRGJQbc-9E8FNrOpQaqWRapANuL0QnbLdh51vMkZJiJQbyToOyC8Tv51vhwqQNhcay1z0DF_kd9Mro6BDFpoDUB3Qh1Walg6CnAj4qyjplc=35946E4F",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fields\": {\r\n    \r\n        \"description\": \"Opis nowej karty xx bug\",\r\n          \"fixVersions\": [\r\n            {\r\n                \"name\": \"1.3\" \r\n            }\r\n          ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://siitraining1.atlassian.net/rest/api/2/issue/ZT-181",
+							"protocol": "https",
+							"host": [
+								"siitraining1",
+								"atlassian",
+								"net"
+							],
+							"path": [
+								"rest",
+								"api",
+								"2",
+								"issue",
+								"ZT-181"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tworzenie taska",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "annshypulina@gmail.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "ATATT3xFfGF04eVSc38sNE3TzDSfImIkUwqLUfDu3Grlo7uUFC9QCA9hvUY5GnmdGy2hbXEpUM5WwRGJQbc-9E8FNrOpQaqWRapANuL0QnbLdh51vMkZJiJQbyToOyC8Tv51vhwqQNhcay1z0DF_kd9Mro6BDFpoDUB3Qh1Walg6CnAj4qyjplc=35946E4F",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fields\": {\n        \"project\": {\n            \"key\": \"ZT\"\n        },\n        \"customfield_10020\": 1,\n        \"summary\": \"Postman task\",\n        \"description\": \"Task from Postman\",\n        \"issuetype\": {\n            \"name\": \"Task\"\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://siitraining1.atlassian.net/rest/api/2/issue",
+							"protocol": "https",
+							"host": [
+								"siitraining1",
+								"atlassian",
+								"net"
+							],
+							"path": [
+								"rest",
+								"api",
+								"2",
+								"issue"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tworzenie buga",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fields\": {\r\n        \"project\": {\r\n            \"key\": \"ZT\"\r\n        },\r\n        \"customfield_10020\": 1,\r\n        \"summary\": \"xxxx\",\r\n        \"description\": \"Opis nowej karty xx bug\",\r\n        \"issuetype\": {\r\n            \"name\": \"Bug\"\r\n        }\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "https://siitraining1.atlassian.net/rest/api/2/issue",
+							"protocol": "https",
+							"host": [
+								"siitraining1",
+								"atlassian",
+								"net"
+							],
+							"path": [
+								"rest",
+								"api",
+								"2",
+								"issue"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an issue by its ID or key",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://siitraining1.atlassian.net/rest/api/3/issue/ZT-51",
+							"protocol": "https",
+							"host": [
+								"siitraining1",
+								"atlassian",
+								"net"
+							],
+							"path": [
+								"rest",
+								"api",
+								"3",
+								"issue",
+								"ZT-51"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
