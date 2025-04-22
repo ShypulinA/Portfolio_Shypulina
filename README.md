@@ -1,7 +1,5 @@
 # ABOUT ME
-Hi, I'm Anna. I am eager to start my first job in IT and willing to learn new skills quickly. 
-With knowledge of QA tools and processes, I am ready to grow and contribute to a team. 
-My greatest asset is the quality of the results I deliver, regardless of the field I'm in
+Hi, I'm Anna. Motivated and detail-oriented QA Trainee with theoretical knowledge and basic practice in manual testing, bug reporting, and API testing. Completed QA training at Sii Poland and continue learning new skills. Reliable, fast learner, and focused on delivering high-quality.
 
 
 # TECHNOLOGIES AND TOOLS
